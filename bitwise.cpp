@@ -64,7 +64,13 @@ inline int prod(int x, int y)
 }
 inline int divix(int x, int y)
 {
-	return 0;
+	int i;
+	while(x >= y)
+	{
+		x = diff(x, y);
+		i++;
+	}
+	return i;
 }
 int main()
 {
