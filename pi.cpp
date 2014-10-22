@@ -29,7 +29,7 @@ long double pi(int d)
 long double fatt(long double s)
 {
 	long double r = 1;
-	for(long n = 1; n < s; n++)
+	for(long n = 1; n <= s; n++)
 		r *= n;
 	return r;
 }
@@ -50,7 +50,7 @@ long double chud(int s)
 		v += (pow(-1, k) * fatt(6 * k) * (163 * 3344418 * k + 13591409))/
 			 (fatt(3 * k) * pow(fatt(k), 3) * pow(640320, 3 * k + 1.5));
 	}
-	return 1 / 12 * v;
+	return  1 / (12 * v);
 }
 int main()
 {
@@ -63,5 +63,5 @@ int main()
 	printf("Continue fractional iterative function takes %ld clock cicles\n", clock() - a);
 	a = clock();
 	printf("\n%.50Lf\n", chud(s));
-	printf("Chudnovsky function takes %ld clock cicles\n", clock() - a);
+	printf("Chudnovsky function takes %ld clock cicles (but calculates more digits than others!)\n", clock() - a);
 }
