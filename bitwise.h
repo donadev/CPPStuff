@@ -1,4 +1,5 @@
 //swap two integers with XOR power
+template <class
 inline void swap(int &a, int &b)
 {
 	a ^= (b ^= (a ^= b));
@@ -78,8 +79,6 @@ inline int abs(int i)
 {
 	return i < 0 ? opposite(i) : i;
 }
-int main()
-{
 	/*
 	 *	Welcome!
 	 *  -----  TODOs ------ 
@@ -87,4 +86,3 @@ int main()
 	 *  mcd function
 	 *  mcm function
 	 */
-}
