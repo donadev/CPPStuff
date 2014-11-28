@@ -1,5 +1,4 @@
 //swap two integers with XOR power
-template <class
 inline void swap(int &a, int &b)
 {
 	a ^= (b ^= (a ^= b));
